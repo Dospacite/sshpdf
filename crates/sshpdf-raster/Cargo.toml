@@ -1,0 +1,15 @@
+[package]
+name = "sshpdf-raster"
+description = "Glyph sets, per-cell optimizer and color quantization for sshpdf"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+build = "build.rs"
+
+[dependencies]
+sshpdf-term.workspace = true
+rayon.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,91 @@
+---
+source: crates/sshpdf/tests/snapshots.rs
+expression: "run(&[\"--text\", path.to_str().unwrap(), \"--page\", \"1\"])"
+---
+Interacting Random-field Dipole Defect Model for Heating in Semiconductor-based
+Qubit Devices
+
+Yujun Choi and Robert Joynt^∗ Department of Physics, University of
+Wisconsin-Madison, Madison, WI 53706, United States (Dated: August 3, 2023)
+
+Semiconductor qubit devices suffer from the drift of important device parameters
+as they are operated. The most important example is a shift in qubit operating
+frequencies. This effect appears to be directly related to the heating of the
+system as gate operations are applied. We show that the main features of this
+phenomenon can be explained by the two-level systems that can also produce
+charge noise, if these systems are considered to form an interacting
+random-field glass. The most striking feature of the theory is that the
+frequency shift can be non-monotonic in temperature. The success of the theory
+narrows considerably the possible models for the two-level systems.
+
+I. INTRODUCTION
+
+There has been considerable progress in semiconductor quantum computing, with
+significant strides in scaling up and in gate fidelities [1, 2]. The chief
+difficulty is decoherence, with charge noise as the main culprit [3–11]. The
+precise nature of the two-level systems (TLS) that produce the noise remains
+elusive. There have been extensive characterizations of the noise spectrum [12,
+13], and the spatial correlations in the noise [14, 15] in different devices.
+These observations can help in the elucidation of the nature of the TLS, but the
+data are not currently sufficient to pin things down precisely.
+
+Another problem, at first sight quite separate, that interferes with qubit
+operation is the pulse-induced resonance shift (PIRS). This is a shift in the
+operating frequency of the qubits as a computation proceeds. This is highly
+problematic, since continual recalibration of the system is not practical.
+Quadrature control [16] and prepulsing [17] can mitigate but not eliminate this
+issue. PIRS has recently received an intensive experimental study [18].
+
+Here we propose that the source of PIRS is also a group of TLS, perhaps the same
+group that gives charge noise. Hence detailed observations of PIRS may provide
+additional insight into the microscopic origin of the noise. We proceed in the
+time-honored fashion of proposing a phenomenological model that explains the
+data, and then seeing what constraints the model places on the underlying
+physics of the system.
+
+Let us take a concrete situation in which the system is in a resting state at
+low temperature T for times t < 0 and the operations, which involve microwave
+pulses that feed energy into the system, begin at t = 0 and end at some later
+time t_f. PIRS is a time-dependent shift ∆f(t) with ∆f(t = 0) = 0 by definition.
+∆f is a function of time that ultimately reverts to the base state some time
+after the operations have ceased. PIRS appears to be rather ubiquitous in
+semiconductor qubits, but there is considerable variability in how it manifests
+itself. Early
+
+∗
+
+rjjoynt@wisc.edu
+
+observations found positive shifts (∆f ≥ 0) of order a few MHz [17]. The
+magnitude of the shift was an increasing function of the energy injected by the
+pulses. It also depended on the details of the electron wavefunctions in the
+dots, for example on the dot occupations. The MHz magnitude of the shifts is
+fairly typical for quantum dot qubits. Importantly, ∆f can also be negative [16,
+19]. The decay time after t_f varies in the dot systems, with values from 0.5 ms
+[1] to 38 µs [19] having been observed. PIRS also occurs in donor-based qubit
+systems [20], though |∆f| is much smaller, of order 10s of kHz. Effects of a
+similar magnitude are seen in flip-flop qubits [21]. In this work we concentrate
+on experiments in dots, but we expect the theory to apply more broadly.
+
+Our interpretation is based on the fact that dot and donor systems share the
+feature that the qubit operating frequency depends on the spatial position of
+the qubit. The arbitrary sign of ∆f then suggests that a change in the electric
+field on the qubit is the origin of PIRS. Experimentally, it now appears to be
+clear that PIRS is essentially a thermal heating effect rather than a mechanical
+effect [1, 18]. This is also supported by the characteristic return to a base
+state, most naturally interpreted as a return to thermal equilibrium. The most
+striking feature of the results is that the magnitude of ∆f is typically not
+monotonic in temperature (T), instead rising to a maximum at about 200-300 mK,
+then decreasing [18].
+
+II. MODEL
+
+To explain these observations, we introduce a model based on the charged TLS
+that are known to exist in these devices, and that in fact are also responsible,
+at least in part, for the decoherence of the qubits. These charged defects or
+traps are modeled as a collection of N fluctuating electric dipoles. The jth
+dipole fluctuates between states s_jp_j, where s_j = ±1 and p_j is a fixed
+vector for each j. For simplicity we assume that the dipoles all have the same
+magnitude: |p_j| = p₀. This is reasonable if all the TLS have the same physical
+origin. The dipoles can have a non-zero equilibrium moment which is random in
+direction and they interact via the long-

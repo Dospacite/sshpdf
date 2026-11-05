@@ -1,0 +1,8 @@
+# Keep the corpus byte-exact on every platform. synthetic.pdf is pure ASCII
+# (ASCII85 streams), so without this git would treat it as text and a Windows
+# checkout with core.autocrlf could rewrite its line endings and break the
+# xref offsets. The SHA-256 values in SOURCES.md also assume exact bytes.
+*.pdf binary
+*.jpg binary
+*.json -text
+*.sh text eol=lf

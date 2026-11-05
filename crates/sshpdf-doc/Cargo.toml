@@ -1,0 +1,15 @@
+[package]
+name = "sshpdf-doc"
+description = "PDF backend trait and hayro implementation for sshpdf"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+build = "build.rs"
+
+[dependencies]
+hayro.workspace = true
+log.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,44 @@
+---
+source: crates/sshpdf/tests/snapshots.rs
+expression: "dump(\"paper-2col.pdf\", 1, \"120x40\", \"octant\", \"true\", \"layout\")"
+---
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        
+                Interacting      Random-field         Dipole     Defect     Model     for  Heating      in  Semiconducto
+                                                                   Qubit     Devices                                    
+                                                                                                                        
+                                                            Yujun   Choi  and  Robert   Joynt\e[3m^∗\e[0m                         
+                             \e[3mDepartment\e[0m   \e[3mof\e[0m \e[3mPhysics,\e[0m \e[3mUniversity\e[0m  \e[3mof\e[0m \e[3mWisconsin-Madison,\e[0m   \e[3mMadison,\e[0m  \e[3mWI\e[0m   \e[3m53706,\e[0m \e[3mUnited\e[0m  
+                                                                 (Dated:  August  3, 2023)                              
+                                                                                                                        
+                              Semiconductor   qubit devices suffer from  the drift of important  device parameters  as t
+                           operated.  The  most important example is a shift in qubit operating frequencies. This effect
+                           to be directly related to the heating of the system as gate operations are applied. We show  
+                           charge  noise, if these systems are considered to form  an interacting random-field glass. Th
+                           main  features of this phenomenon   can be explained by  the two-level systems that can also 
+                           striking feature of the theory is that the frequency shift can be non-monotonic in temperatur
+                           success of the theory narrows  considerably the possible models  for the two-level systems.  
+    \e[38;2;62;62;62m𜴃\e[48;2;30;30;30m𜺨\e[49m𜴁\e[38;2;47;47;47m𜶒\e[38;2;31;31;31m🯦                                                                                                               \e[0m
+    \e[38;2;54;54;54m▝\e[38;2;29;29;29;48;2;59;59;59m𜴳𜴵𜴬\e[49m𜴍                      \e[0mI.   INTRODUCTION                                observations  found  positive shifts (∆\e[3mf\e[0m
+    \e[38;2;46;46;46m𜵲\e[38;2;59;59;59m𜶷\e[38;2;58;58;58m𜵁𜵼\e[38;2;32;32;32m𜴶                                                                       \e[0mMHz   [17]. The  magnitude    of the shi
+    \e[38;2;57;57;57m𜺫\e[38;2;34;34;34m▘ \e[38;2;71;71;71m𜺫        \e[0mThere  has been  considerable  progress  in semiconductor       function  of the  energy   injected by  
+    \e[38;2;55;55;55m𜺫𜴛\e[48;2;37;37;37m𜴪\e[38;2;41;41;41;48;2;64;64;64m𜵎\e[38;2;30;30;30;49m𜴶     \e[0mquantum   computing,   with significant strides in scaling up     depended    on the  details  of the  ele
+    \e[38;2;47;47;47m🯧𜴵🮅\e[38;2;56;56;56;48;2;35;35;35m𜴜\e[38;2;30;30;30;49m𜴉     \e[0mand in gate fidelities [1, 2]. The chief difficulty is decoher-   in the  dots, for example    on the  dot
+    \e[38;2;40;40;40m▗\e[38;2;42;42;42m𜵩\e[38;2;46;46;46m▆𜶜\e[38;2;29;29;29m𜺣     \e[0mence, with  charge  noise as the  main  culprit  [3–11]. The      MHz   magnitude   of the shifts is fairl
+    \e[38;2;64;64;64m𜴘\e[38;2;59;59;59;48;2;34;34;34m𜴈\e[38;2;45;45;45;49m𜴝\e[38;2;63;63;63m𜶖      \e[0mprecise nature  of the  two-level systems   (TLS)  that  pro-     dot  qubits.  Importantly,   ∆\e[3mf\e[0m   can  a
+              duce  the noise remains   elusive. There   have  been  exten-     19]. The   decay  time  after \e[3mt_f\e[0m varies
+    \e[38;2;40;40;40m▝\e[38;2;55;55;55m𜵳\e[38;2;50;50;50m𜵤\e[38;2;56;56;56m𜴪🮂     \e[0msive characterizations  of the noise spectrum   [12, 13], and     with  values  from  0.5 ms   [1] to 38  
+    \e[38;2;46;46;46m𜺫\e[38;2;51;51;51m𜶒\e[38;2;65;65;65;48;2;36;36;36m𜴌\e[38;2;60;60;60m𜴛\e[38;2;36;36;36;49m𜶬\e[38;2;33;33;33m𜺣    \e[0mthe spatial correlations  in the  noise [14, 15] in different     observed.  PIRS   also occurs in donor-b
+     \e[38;2;34;34;34m𜵲\e[38;2;52;52;52m𜴢🮂🮂\e[38;2;39;39;39m𜺨    \e[0mdevices.  These  observations   can help  in the elucidation      [20], though  \e[3m|\e[0m∆\e[3mf|\e[0m  is much   smaller, o
+     \e[38;2;59;59;59m𜴚\e[38;2;32;32;32;48;2;54;54;54m𜴆\e[38;2;42;42;42m𜵎\e[49m      \e[0mof the nature  of the TLS,  but  the data  are not currently      Effects of a similar magnitude   are  se
+     \e[38;2;35;35;35m𜴡\e[38;2;60;60;60;48;2;35;35;35m𜴆\e[48;2;41;41;41m𜴣\e[38;2;28;28;28;49m𜴍     \e[0msufficient to pin things down   precisely.                        [21]. In this work we  concentrate  on  
+     \e[38;2;41;41;41m𜴚\e[38;2;61;61;61;48;2;28;28;28m𜴪𜴲\e[38;2;36;36;36;49m▂\e[38;2;33;33;33m𜺣      \e[0mAnother   problem,   at  first sight quite  separate,  that     but  we expect  the  theory to apply  mo
+    \e[38;2;43;43;43m𜺠\e[38;2;35;35;35m𜶵\e[38;2;51;51;51;48;2;35;35;35m𜴛\e[38;2;62;62;62m𜴒\e[38;2;47;47;47;49m𜵳\e[38;2;39;39;39m𜺨    \e[0minterferes with qubit  operation   is the pulse-induced  res-       Our   interpretation  is based  on  th
+    \e[38;2;35;35;35m𜺫\e[38;2;47;47;47m🮂🮂🮂🮂     \e[0monance  shift (PIRS).  This  is a shift in the operating fre-     donor  systems  share  the feature that 
+    \e[38;2;42;42;42m𜴘\e[38;2;59;59;59m𜴧𜴧𜴧\e[38;2;28;28;28m🯦     \e[0mquency  of the qubits  as a computation    proceeds.  This is     frequency   depends  on  the  spatial po
+     \e[38;2;42;42;42m𜴚\e[38;2;62;62;62;48;2;28;28;28m𜴧\e[38;2;51;51;51;49m𜴔      \e[0mhighly problematic,   since  continual  recalibration  of the     The  arbitrary  sign of ∆\e[3mf\e[0m  then  sugges
+    \e[38;2;42;42;42m𜴃\e[38;2;59;59;59m𜴆𜴆𜴆\e[38;2;28;28;28m▘     \e[0msystem  is not  practical.   Quadrature    control  [16] and      the electric field on the qubit is the o
+    \e[38;2;49;49;49m𜵲\e[38;2;57;57;57m𜶮\e[38;2;56;56;56m𜴸\e[38;2;63;63;63m🮂\e[38;2;28;28;28m▘     \e[0mprepulsing  [17] can  mitigate   but  not eliminate  this is-     imentally, it now  appears  to be  clear

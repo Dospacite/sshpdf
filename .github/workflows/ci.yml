@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+      - run: cargo fmt --all -- --check
+
+  clippy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo clippy --workspace --all-targets -- -D warnings
+
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      # The end-to-end tests drive the viewer in tmux; they skip without it.
+      - name: Install tmux
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y tmux
+      # Unit, snapshot (--dump / --text) and tmux tests.
+      - run: cargo test --workspace
+      - name: --dump smoke test
+        shell: bash
+        run: |
+          cargo run --release -p sshpdf -- --config none --dump corpus/paper-2col.pdf \
+            --page 1 --size 120x40 --tier octant --colors true > dump.txt
+          test "$(wc -l < dump.txt)" -eq 40
+          cargo run --release -p sshpdf -- --config none --text corpus/cjk.pdf --page 1 | head -5
+
+  msrv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.92
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo check --workspace
+
+  musl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-unknown-linux-musl
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo build --release --target x86_64-unknown-linux-musl -p sshpdf
+      - name: Static binary runs
+        run: |
+          file target/x86_64-unknown-linux-musl/release/sshpdf
+          target/x86_64-unknown-linux-musl/release/sshpdf --config none --text corpus/synthetic.pdf --page 1 | head -3

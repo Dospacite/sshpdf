@@ -1,0 +1,5 @@
+# Snapshots and data are compared byte for byte: keep LF on every platform.
+* text=auto eol=lf
+*.pdf binary
+*.ttf binary
+*.png binary

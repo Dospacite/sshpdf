@@ -1,0 +1,53 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+# Patched copy of hayro (see vendor/README.md); not a workspace member so
+# workspace-wide lints don't apply to third-party code.
+exclude = ["vendor/hayro"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.92"
+license = "MIT"
+
+[workspace.dependencies]
+sshpdf-doc = { path = "crates/sshpdf-doc" }
+sshpdf-layout = { path = "crates/sshpdf-layout" }
+sshpdf-raster = { path = "crates/sshpdf-raster" }
+sshpdf-term = { path = "crates/sshpdf-term" }
+
+hayro = { path = "vendor/hayro" }
+anyhow = "1.0"
+ab_glyph = "0.2.32"
+base64 = "0.23"
+clap = { version = "4.6", features = ["derive"] }
+crossterm = "0.29"
+dirs = "7.0"
+insta = "1.49"
+log = "0.4"
+notify = "8.2"
+png = "0.18"
+ratatui = { version = "0.30", default-features = false, features = ["crossterm", "underline-color"] }
+rayon = "1.12"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.9"
+unicode-width = "0.2"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+dbg_macro = "warn"
+
+[profile.release]
+lto = "thin"
+codegen-units = 4
+strip = "debuginfo"
+
+# Rendering and the per-cell optimizer are slow without optimizations; keep
+# debug builds usable.
+[profile.dev.package."*"]
+opt-level = 2
+[profile.dev]
+opt-level = 1

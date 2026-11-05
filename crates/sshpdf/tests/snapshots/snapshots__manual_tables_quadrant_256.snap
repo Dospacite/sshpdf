@@ -1,0 +1,34 @@
+---
+source: crates/sshpdf/tests/snapshots.rs
+expression: "dump(\"manual-tables.pdf\", 2, \"100x30\", \"quadrant\", \"256\", \"layout\")"
+---
+                                                                                                    
+                                                                                                    
+            \e[38;5;235m────────────────────────────────────────────────────────────────────────────────────────\e[0m
+            \e[38;5;246mThe  machine    level  has  the  highest  privileges   and  is the  only  mandatory    p\e[0m
+                                                                                                    
+            \e[38;5;246mhardware   platform.   Code   run  in machine-mode       (M-mode)    is usually  inheren\e[0m
+            \e[38;5;246mlevel access    to  the  machine    implementation.      M-mode     can  be   used   to \e[0m
+            \e[38;5;246menvironments     on   RISC-V.   User-mode      (U-mode)     and   supervisor-mode      (\e[0m
+            \e[38;5;246mconventional   application   and  operating   system   usage   respectively.            \e[0m
+                                                                                                    
+            \e[38;5;246mEach  privilege  level has  a  core  set of privileged   ISA  extensions    with optiona\e[0m
+            \e[38;5;246mFor  example,   machine-mode       supports    an  optional   standard   extension    fo\e[0m
+            \e[38;5;246msupervisor  mode    can  be extended    to support   Type-2  hypervisor   execution   as\e[0m
+                                                                                                    
+            \e[38;5;246mImplementations      might  provide   anywhere   from   1 to 3 privilege  modes    tradi\e[0m
+            \e[38;5;246mlower  implementation     cost, as shown   in \e[38;5;68mTable   2\e[38;5;246m.                                \e[0m
+                                                                                                    
+                                           \e[3;38;5;246mTable\e[23m  \e[3m2.\e[23m \e[3mSupported\e[23m   \e[3mcombination\e[23m   \e[3mof\e[23m \e[3mprivilege\e[23m  \e[3mmodes.\e[23m \e[0m
+                     \e[38;5;235m┌──────────────────────┬───────────────────────┬───────────────────────────────\e[0m
+                     \e[4;38;5;235m│  \e[1;38;5;246mNumber\e[22;38;5;235m   \e[1;38;5;246mof\e[22;38;5;235m \e[1;38;5;246mlevels\e[22;38;5;235m  │\e[1;38;5;246mSupported\e[22;38;5;235m    \e[1;38;5;246mModes\e[22;38;5;235m     │\e[1;38;5;246mIntended\e[22;38;5;235m   \e[1;38;5;246mUsage\e[22;38;5;235m               \e[0m
+                     \e[38;5;235m│           \e[38;5;246m1          \e[38;5;235m│\e[38;5;246mM                      \e[38;5;235m│\e[38;5;246mSimple  embedded    systems    \e[0m
+                     \e[38;5;235m│           \e[38;5;246m2          \e[38;5;235m│\e[38;5;246mM, U                   \e[38;5;235m│\e[38;5;246mSecure  embedded    systems    \e[0m
+                     \e[38;5;235m│           \e[38;5;246m3          \e[38;5;235m│\e[38;5;246mM, S, U                \e[38;5;235m│\e[38;5;246mSystems  running  Unix-like ope\e[0m
+                     \e[38;5;235m└──────────────────────┴───────────────────────┴───────────────────────────────\e[0m
+                                                                                                    
+            \e[38;5;246mAll hardware    implementations      must   provide   M-mode,    as  this  is the  only \e[0m
+            \e[38;5;246maccess  to the  whole  machine.    The  simplest   RISC-V   implementations     may   pr\e[0m
+            \e[38;5;246mthis will provide  no protection   against  incorrect  or  malicious   application  code\e[0m
+                                                                                                    
+                          │  \e[3;38;5;246mThe\e[23m   \e[3mlock\e[23m  \e[3mfeature\e[23m  \e[3mof\e[23m  \e[3mthe\e[23m  \e[3moptional\e[23m  \e[3mPMP\e[23m    \e[3mfacility\e[23m \e[3mcan\e[23m  \e[3mprovide\e[23m   \e[0m
